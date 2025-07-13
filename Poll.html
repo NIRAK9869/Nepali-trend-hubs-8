@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vote Now - Nepali Trend Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📊 Vote Now</h1>
+
+  <p>कुन TikTok Star तपाईलाई सबैभन्दा मन पर्छ?</p>
+
+  <button onclick="vote('star1')">Star 1</button>
+  <button onclick="vote('star2')">Star 2</button>
+  <button onclick="vote('star3')">Star 3</button>
+
+  <h3>Vote Results:</h3>
+  <ul>
+    <li>Star 1: <span id="star1Count">0</span></li>
+    <li>Star 2: <span id="star2Count">0</span></li>
+    <li>Star 3: <span id="star3Count">0</span></li>
+  </ul>
+
+  <a href="index.html">🔙 Back to Home</a>
+
+  <script>
+    let votes = {
+      star1: 0,
+      star2: 0,
+      star3: 0
+    };
+
+    function vote(star) {
+      votes[star]++;
+      updateCounts();
+      alert("Your vote for " + star + " is counted. Thank you!");
+    }
+
+    function updateCounts() {
+      document.getElementById("star1Count").textContent = votes.star1;
+      document.getElementById("star2Count").textContent = votes.star2;
+      document.getElementById("star3Count").textContent = votes.star3;
+    }
+
+    // Initialize counts on page load
+    updateCounts();
+  </script>
+</body>
+</html>

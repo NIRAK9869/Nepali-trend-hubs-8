@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Rashifal - Nepali Trend Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔮 Daily Rashifal</h1>
+
+  <p>Tapai ko rashi chhane ra Check garnuhos:</p>
+  <select id="rashifalSelect">
+    <option value="">Select Rashi</option>
+    <option value="mesh">Mesh (Aries)</option>
+    <option value="brish">Brish (Taurus)</option>
+    <option value="mithun">Mithun (Gemini)</option>
+    <option value="karkat">Karkat (Cancer)</option>
+    <option value="singha">Singha (Leo)</option>
+    <option value="kanya">Kanya (Virgo)</option>
+    <option value="tula">Tula (Libra)</option>
+    <option value="brischik">Brischik (Scorpio)</option>
+    <option value="dhanu">Dhanu (Sagittarius)</option>
+    <option value="makar">Makar (Capricorn)</option>
+    <option value="kumbha">Kumbha (Aquarius)</option>
+    <option value="min">Min (Pisces)</option>
+  </select>
+
+  <button onclick="showRashifal()">Check Rashifal</button>
+
+  <h3 id="rashifalResult"></h3>
+
+  <a href="index.html">🔙 Back to Home</a>
+
+  <script>
+    const rashifalMessages = {
+      mesh: "आज तपाईको उर्जा उच्च छ। नयाँ अवसरहरु आउनेछन्।",
+      brish: "धैर्यता राख्नुस्, सफलताको मार्ग खुल्नेछ।",
+      mithun: "सहयोगीहरु तपाईसँग छन्, योजना बनाउनुहोस्।",
+      karkat: "स्वास्थ्यमा ध्यान दिनुहोस्। आराम गर्नुहोस्।",
+      singha: "उत्साह बढाउने दिन छ, काममा सफलता मिल्नेछ।",
+      kanya: "ध्यान केन्द्रित गर्नुहोस्, ध्यान र तपशिल महत्वपूर्ण छ।",
+      tula: "सन्तुलन कायम राख्नुस्, घर परिवारमा खुशी छ।",
+      brischik: "धेरै कामले थकित हुनुहुन्छ, विश्राम आवश्यक छ।",
+      dhanu: "यात्रा र नयाँ अवसरहरुको सम्भावना छ।",
+      makar: "आर्थिक पक्षमा सुधार हुनेछ। सोच विचार गर्नुहोस्।",
+      kumbha: "सृजनात्मक सोचले फाइदा दिनेछ। नयाँ योजना बनाउनुहोस्।",
+      min: "सम्बन्धहरु सुधार हुने दिन छ। मित्रता बलियो हुनेछ।"
+    };
+
+    function showRashifal() {
+      const select = document.getElementById("rashifalSelect");
+      const result = document.getElementById("rashifalResult");
+      const rashi = select.value;
+
+      if (rashi === "") {
+        result.textContent = "कृपया आफ्नो राशी चयन गर्नुहोस्।";
+      } else {
+        result.textContent = rashifalMessages[rashi];
+      }
+    }
+  </script>
+</body>
+</html>

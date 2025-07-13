@@ -1,0 +1,27 @@
+body {
+  background-color: #f7f7f7;
+  color: #222;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #e60000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #0066cc;
+  font-weight: bold;
+}

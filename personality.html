@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Know Yourself - Nepali Trend Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🧠 Know Yourself</h1>
+
+  <p>Talako box ma naam halera enter gara:</p>
+  <input type="text" id="nameInput" placeholder="Tapaiko Naam">
+  <button onclick="showPersonality()">Check Now</button>
+
+  <h3 id="result"></h3>
+
+  <a href="index.html">🔙 Back to Home</a>
+
+  <script>
+    function showPersonality() {
+      const name = document.getElementById("nameInput").value.toLowerCase();
+      const result = document.getElementById("result");
+
+      // Simple name-based logic
+      if (name.includes("ram")) {
+        result.textContent = "😄 Ram jasto naam ko manxe: Funny & Loyal!";
+      } else if (name.includes("sita")) {
+        result.textContent = "😊 Sita jasto naam: Smart & Caring!";
+      } else if (name.includes("sagar")) {
+        result.textContent = "🌊 Sagar jasto naam: Deep Thinker & Calm.";
+      } else {
+        const results = [
+          "🔥 You are bold and creative!",
+          "🌟 You are friendly and confident!",
+          "💡 You are a problem-solver!",
+          "🎯 Focused and result-driven!"
+        ];
+        let random = Math.floor(Math.random() * results.length);
+        result.textContent = results[random];
+      }
+    }
+  </script>
+</body>
+</html>

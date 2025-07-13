@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trending News - Nepali Trend Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📰 Trending News</h1>
+
+  <div id="news-container">
+    <!-- News yaha aauchha -->
+  </div>
+
+  <a href="index.html">🔙 Back to Home</a>
+
+  <script>
+    // News haru yaha xa
+    const trendingNews = [
+      "🎤 New Nepali Rap Song TikTok ma viral!",
+      "🇳🇵 Rato Machhindranath Jatra suru!",
+      "📱 Instagram ma new meme le dhamal",
+      "🛣️ Kathmandu-Pokhara Fast Track almost complete",
+      "💰 1 Lakh jeetyo Online Quiz le!"
+    ];
+
+    const container = document.getElementById("news-container");
+
+    trendingNews.forEach(news => {
+      const p = document.createElement("p");
+      p.textContent = "👉 " + news;
+      container.appendChild(p);
+    });
+  </script>
+</body>
+</html>
